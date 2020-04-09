@@ -5,10 +5,8 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-  StatusBar,
   StyleSheet,
-  Platform,
-  ImageBackground
+  ImageBackground,
 } from "react-native";
 import {
   Container,
@@ -20,7 +18,7 @@ import {
   Body,
   Right,
   Header,
-  Icon
+  Icon,
 } from "native-base";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
@@ -29,7 +27,7 @@ export default class HomeTab extends React.Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
       <Icon name="md-home" style={{ color: tintColor }} />
-    )
+    ),
   };
   render() {
     return (
@@ -44,7 +42,7 @@ export default class HomeTab extends React.Component {
                     height: 25,
                     width: 25,
                     marginTop: 5,
-                    paddingHorizontal: 5
+                    paddingHorizontal: 5,
                   }}
                 />
               </TouchableOpacity>
@@ -74,7 +72,7 @@ export default class HomeTab extends React.Component {
                 paddingStart: 15,
                 paddingEnd: 5,
                 alignItems: "center",
-                marginVertical: 5
+                marginVertical: 5,
               }}
             >
               <View>
@@ -84,7 +82,7 @@ export default class HomeTab extends React.Component {
                     height: 55,
                     width: 55,
                     borderWidth: 3,
-                    marginRight: 20
+                    marginRight: 20,
                   }}
                 />
                 <Text>Your Story</Text>
@@ -100,7 +98,7 @@ export default class HomeTab extends React.Component {
                     borderWidth: 1,
                     borderRadius: 55 / 2,
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <Image
@@ -121,7 +119,7 @@ export default class HomeTab extends React.Component {
                     borderWidth: 1,
                     borderRadius: 55 / 2,
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <Image
@@ -142,7 +140,7 @@ export default class HomeTab extends React.Component {
                     borderWidth: 1,
                     borderRadius: 55 / 2,
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <Image
@@ -163,7 +161,7 @@ export default class HomeTab extends React.Component {
                     borderWidth: 1,
                     borderRadius: 55 / 2,
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <Image
@@ -184,7 +182,7 @@ export default class HomeTab extends React.Component {
                     borderWidth: 1,
                     borderRadius: 55 / 2,
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <Image
@@ -346,11 +344,6 @@ export default class HomeTab extends React.Component {
 
 const styles = StyleSheet.create({
   androidHeader: {
-    ...Platform.select({
-      android: {
-        marginTop: StatusBar.currentHeight
-      }
-    }),
-    backgroundColor: "white"
-  }
+    backgroundColor: "white",
+  },
 });
